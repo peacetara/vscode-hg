@@ -120,6 +120,11 @@
   `"cli"` &mdash; spawn a new `hg` process per command (default).
   `"server"` &mdash; run a command server process &nbsp;_i.e. `hg serve --cmdserve`_  
 
+# Dependencies/Development.
+  * Node
+  * Typescript (http://www.typescriptlang.org)
+  * from repo dir run: `npm install`
+
 # Acknowledgements
 
 [ajansveld](https://github.com/ajansveld), [hoffmael](https://github.com/hoffmael), [nioh-wiki](https://github.com/nioh-wiki), [joaomoreno](https://github.com/joaomoreno), [nsgundy](https://github.com/nsgundy)
