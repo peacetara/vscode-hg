@@ -16,6 +16,10 @@ export function fromHgUri(uri: Uri): { path: string; ref: string; } {
 // for hg URIs, let's change the file extension of these uris to .hg,
 // when `replaceFileExtension` is true.
 export function toHgUri(uri: Uri, ref: string, replaceFileExtension = false): Uri {
+	// awful hack, to avoid replaceFileExtension if using python.
+	if (uri.path.indexOf('.py') > 0) {
+		replaceFileExtension = false;
+	}
 	return uri.with({
 		scheme: 'hg-original',
 		path: replaceFileExtension ? `${uri.path}.hg` : uri.path,
